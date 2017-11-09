@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CSS Playing Cards</title>
+    <link rel="stylesheet" type="text/css" href="cards.css" media="screen" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- <script>
+$("input").bind('keyup mouseup', function() {
+    var count = $("#count").val();
+    $("#result").text(count);
+});
+
+</script>
+ -->
+    <style type="text/css">
+    body {
+        margin: 2em 20%;
+    }
+
+    .playingCards ul.table,
+    .playingCards ul.hand,
+    .playingCards ul.deck {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 1.5em 0;
+        position: relative;
+        clear: both;
+    }
+
+    ul,
+    menu,
+    dir {
+        display: block;
+        list-style-type: disc;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 40px;
+    }
+
+    .playingCards ul.table li,
+    .playingCards ul.hand li,
+    .playingCards ul.deck li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: left;
+    }
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="playingCards faceImages">
+
+        <h1>CSS Playing Cards</h1>
+
+
+        <div id="setup">
+            <p>Number of cards to draw:</p>
+            <input type="number" id="count" name="cards" min="1" max="200" onchange="genCards()">
+            <br>
+            <input type="radio" name="gentype" id="perm" checked="checked"> Permutation
+            <br>
+            <input type="radio" name="gentype" id="comb"> Combination
+        </div>
+
+        <p class="result">Result: </p>
+        <ul class="table">
+
+        </ul>
+    </div>
+</body>
+
+</html>
