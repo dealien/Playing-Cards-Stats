@@ -1,15 +1,16 @@
 function genCards() {
-    if ($('#perm').is(':checked')) {
+    if ($('#comb').is(':checked')) {
         var type = true;
         $('#count').attr('max', 10000);
+        $('.result').html('Result:');
     } else {
         var type = false;
-        $('#count').attr('max', 20);
+        $('#count').attr('max', 45);
     }
     var count = parseInt($("#count").val());
-    if (type == false && count > 20) {
-        count = 20;
-        $("#count").val(20);
+    if (type == false && count > 45) {
+        count = 45;
+        $("#count").val(45);
     } else if (count < 1) {
         count = 1;
         $("#count").val(1);
